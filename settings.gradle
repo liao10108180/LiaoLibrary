@@ -1,0 +1,14 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+rootProject.name = "LiaoLibraryDemo"
+include ':app'
+include ':library_liao_common'
+include ':library_liao_base'
+include ':library_liao_http'
+include ':library_liao_utils'
