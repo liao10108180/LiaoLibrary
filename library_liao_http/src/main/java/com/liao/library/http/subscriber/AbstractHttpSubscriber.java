@@ -11,7 +11,7 @@ import io.reactivex.rxjava3.subscribers.ResourceSubscriber;
  * @Author: CHN_Liao
  * @CreateDate: 2021/10/25 17:47
  */
-public abstract class AbstractSubscriber<T> extends ResourceSubscriber<T> {
+public abstract class AbstractHttpSubscriber<T> extends ResourceSubscriber<T> {
 
     protected abstract void onSuccess(@NonNull T t);
 

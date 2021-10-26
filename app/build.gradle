@@ -38,4 +38,6 @@ dependencies {
 
     //Common Library
     implementation project(':library_liao_common')
+    //Base Library
+    implementation project(':library_liao_base')
 }

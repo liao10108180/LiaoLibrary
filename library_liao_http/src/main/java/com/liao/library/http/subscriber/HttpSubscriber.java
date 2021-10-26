@@ -2,24 +2,22 @@ package com.liao.library.http.subscriber;
 
 import com.liao.library.http.HttpExceptionMsg;
 
-import retrofit2.Response;
-
 /**
  * @ProjectName: LiaoLibraryDemo
  * @Package: com.liao.library.http.subscriber
- * @ClassName: CommonResponseSubscriber
+ * @ClassName: CommonSubscriber
  * @Description: description class
  * @Author: CHN_Liao
- * @CreateDate: 2021/10/25 17:40
+ * @CreateDate: 2021/10/25 17:50
  */
-public abstract class CommonResponseSubscriber <T> extends AbstractSubscriber<Response<T>> {
+public abstract class HttpSubscriber<T> extends AbstractHttpSubscriber<T> {
     @Override
     protected void onStart() {
         super.onStart();
     }
 
     @Override
-    public void onNext(Response<T> t) {
+    public void onNext(T t) {
         onSuccess(t);
     }
 

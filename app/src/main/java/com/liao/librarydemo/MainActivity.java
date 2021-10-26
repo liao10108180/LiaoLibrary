@@ -1,14 +1,21 @@
 package com.liao.librarydemo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.liao.library.base.BaseBindingActivity;
+import com.liao.librarydemo.databinding.ActivityMainBinding;
+
+public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getContentViewId() {
+        return R.layout.activity_main;
     }
+
+    @Override
+    protected void init(Bundle savedInstanceState) {
+
+    }
+
+
 }
