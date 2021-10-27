@@ -11,7 +11,7 @@ import io.reactivex.rxjava3.disposables.Disposable;
  * @Author: CHN_Liao
  * @CreateDate: 2021/10/26 15:17
  */
-public class BaseDisposableManager {
+public class BaseDisposableHelper {
     protected CompositeDisposable mCompositeDisposable;
 
     /**

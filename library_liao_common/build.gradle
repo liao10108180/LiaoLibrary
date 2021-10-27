@@ -36,7 +36,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //AndroidAutoSize屏幕适配
-    api 'me.jessyan:autosize:1.2.1'
+//    api 'me.jessyan:autosize:1.2.1'
 
     //MMKV，腾讯出品，如SharePreference
     api 'com.tencent:mmkv-static:1.2.10'

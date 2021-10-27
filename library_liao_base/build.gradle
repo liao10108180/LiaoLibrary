@@ -43,5 +43,7 @@ dependencies {
     implementation project(path: ':library_liao_common')
     //依赖liao_utils库
     implementation project(path: ':library_liao_utils')
+    //依赖liao_http库
+    implementation project(path: ':library_liao_http')
 
 }

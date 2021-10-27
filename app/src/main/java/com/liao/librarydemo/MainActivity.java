@@ -2,10 +2,16 @@ package com.liao.librarydemo;
 
 import android.os.Bundle;
 
-import com.liao.library.base.BaseBindingActivity;
+import com.liao.library.base.activity.BaseVMActivity;
 import com.liao.librarydemo.databinding.ActivityMainBinding;
 
-public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
+public class MainActivity extends BaseVMActivity<MainViewModel,ActivityMainBinding> {
+
+
+    @Override
+    protected MainViewModel createViewModel() {
+        return new MainViewModel();
+    }
 
     @Override
     protected int getContentViewId() {
@@ -14,8 +20,7 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
 
     @Override
     protected void init(Bundle savedInstanceState) {
-
+        mViewModel.testToast();
     }
-
 
 }

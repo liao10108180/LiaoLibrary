@@ -1,6 +1,6 @@
 package com.liao.library.http;
 
-import com.liao.common.BaseDisposableManager;
+import com.liao.common.BaseDisposableHelper;
 import com.liao.common.scheduler.RxScheduler;
 import com.liao.library.http.subscriber.HttpResponseSubscriber;
 import com.liao.library.http.subscriber.HttpSubscriber;
@@ -17,7 +17,7 @@ import retrofit2.Response;
  * @Author: CHN_Liao
  * @CreateDate: 2021/10/26 15:33
  */
-public class HttpDisposableManager extends BaseDisposableManager {
+public class HttpDisposableHelper extends BaseDisposableHelper {
 
     public <T> void addDisposable(Flowable<T> flowable, HttpSubscriber<T> subscriber) {
         Disposable d = flowable.compose(RxScheduler.Flo_io_main())

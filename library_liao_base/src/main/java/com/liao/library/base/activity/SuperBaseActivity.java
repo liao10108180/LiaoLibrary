@@ -1,4 +1,4 @@
-package com.liao.library.base;
+package com.liao.library.base.activity;
 
 import android.os.Bundle;
 import android.view.MotionEvent;

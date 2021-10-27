@@ -1,4 +1,4 @@
-package com.liao.library.base;
+package com.liao.library.base.activity;
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -8,11 +8,13 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.liao.library.base.BaseViewModel;
+
 /**
  * @ProjectName: LiaoLibraryDemo
  * @Package: com.liao.library.base
  * @ClassName: BaseVMActivity
- * @Description: description class
+ * @Description: 适用于MVVM的BaseActivity
  * @Author: CHN_Liao
  * @CreateDate: 2021/10/26 17:12
  */
