@@ -20,6 +20,7 @@ import org.greenrobot.eventbus.EventBus;
  * @CreateDate: 2021/10/26 14:38
  */
 public abstract class SuperBaseActivity extends AppCompatActivity {
+    protected String TAG = this.getClass().getSimpleName();
 
     @Override
     protected void onDestroy() {
