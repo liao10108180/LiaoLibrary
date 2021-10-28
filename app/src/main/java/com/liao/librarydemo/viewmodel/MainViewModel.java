@@ -1,4 +1,4 @@
-package com.liao.librarydemo;
+package com.liao.librarydemo.viewmodel;
 
 import com.liao.library.base.BaseViewModel;
 

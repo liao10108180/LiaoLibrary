@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.liao.library.base.fragment.BaseVMFragment;
 import com.liao.librarydemo.databinding.ActivityMainBindingImpl;
+import com.liao.librarydemo.viewmodel.MainViewModel;
 
 /**
  * @ProjectName: LiaoLibraryDemo

@@ -1,0 +1,38 @@
+apply plugin: "maven-publish"
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                group = "com.liao"
+                artifactId = PROJ_ARTIFACTID
+                version = "1.0.0-test"
+
+                pom {
+                    name = PROJ_NAME
+                    url = "https://github.com/liao10108180/LiaoLibrary.git"
+                    licenses {
+                        license {
+                            name = "The Apache License, Version 2.0"
+                            url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = "Liao"
+                            name = "LiaoZhenHui"
+                        }
+                    }
+                    scm {
+                        connection = "https://github.com/liao10108180/LiaoLibrary/issues"
+                        developerConnection = "https://github.com/liao10108180/LiaoLibrary.git"
+                        url = "https://github.com/liao10108180/LiaoLibrary"
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,14 @@
+ext {
+
+    androidDependencies = [
+            appCompat: "androidx.appcompat:appcompat:1.3.1",
+            material : "com.google.android.material:material:1.4.0",
+            constraintlayout : "androidx.constraintlayout:constraintlayout:2.0.4"
+    ]
+
+    testDependencies = [
+            junit       : "junit:junit:",
+            extJunit      : "androidx.test.ext:junit:1.1.2",
+            espressoCore: "androidx.test.espresso:espresso-core:3.4.0"
+    ]
+}
