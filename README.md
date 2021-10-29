@@ -20,7 +20,7 @@ implementation 'com.github.liao10108180.LiaoLibrary:library-utils:lastVersion'
 //Http请求库
 implementation 'com.github.liao10108180.LiaoLibrary:library-http:lastVersion'
 
-//Base库，适用时必须依赖以上3个库(common,utils,http)
+//Base库，使用时必须依赖以上3个库(common,utils,http)
 implementation 'com.github.liao10108180.LiaoLibrary:library-base:lastVersion'
 
 ```
