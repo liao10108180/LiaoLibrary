@@ -1,4 +1,5 @@
-# LiaoLibrary
+# LiaoLibrary [![](https://jitpack.io/v/liao10108180/LiaoLibrary.svg)](https://jitpack.io/#liao10108180/LiaoLibrary)
+
 Liao's Android development library
 ## 依赖
 请在项目build.gradle中添加以下内容，gradle7.0+的请在settings.gradle中添加
