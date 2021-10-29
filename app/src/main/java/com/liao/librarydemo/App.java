@@ -1,5 +1,8 @@
 package com.liao.librarydemo;
 
+import android.view.Gravity;
+
+import com.hjq.toast.ToastUtils;
 import com.liao.common.util.LogUtils;
 import com.liao.library.base.BaseApplication;
 
@@ -23,5 +26,9 @@ public class App extends BaseApplication {
                 .setLogSwitch(true) //是否开启日志，默认为true
                 .setSaveDays(6) //日志文件保存天数,单位：天
                 .apply();
+
+        //Toast
+        ToastUtils.init(this);
+        ToastUtils.setGravity(Gravity.CENTER);
     }
 }

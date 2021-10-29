@@ -11,14 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LiaoLibraryDemo">
         <activity
-            android:name=".activity.MainActivity"
-            android:exported="true">
+            android:name=".activity.SplashActivity"
+            android:exported="true"
+            android:theme="@style/StartTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity.MainActivity" />
     </application>
 
 </manifest>

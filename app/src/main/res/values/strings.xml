@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LiaoLibraryDemo</string>
+
+    <string name="welcome_text">欢迎使用LiaoLibrary</string>
+    <string name="welcome_creator_name">作者:廖振辉</string>
+    <string name="welcome_email">邮箱:195755352@qq.com</string>
 </resources>

@@ -50,6 +50,12 @@ dependencies {
     implementation project(':library_liao_common')
     //Base Library
     implementation project(':library_liao_base')
+    //Utils Library
+    implementation project(':library_liao_utils')
+    //Http Library
+    implementation project(':library_liao_http')
+
+    implementation 'com.github.getActivity:ToastUtils:9.6'
 
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
 }

@@ -9,7 +9,9 @@ import androidx.annotation.NonNull;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
+import com.hjq.toast.ToastUtils;
 import com.liao.library.base.activity.BaseBindingActivity;
+import com.liao.library.utils.BarUtils;
 import com.liao.librarydemo.R;
 import com.liao.librarydemo.adapter.MainAdapter;
 import com.liao.librarydemo.databinding.ActivityMainBinding;
@@ -37,9 +39,10 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
         mAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(@NonNull BaseQuickAdapter<?, ?> adapter, @NonNull View view, int position) {
-                Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+//                ToastUtils.show("" + position);
                 MainEntity entity = (MainEntity) adapter.getData().get(position);
-                Intent intent = new Intent(MainActivity.this,MainActivity.class);
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
             }
         });
         mBinding.recyclerView.setAdapter(mAdapter);
