@@ -12,7 +12,7 @@ repositories {
 请在app的build.gradle根据情况添加以下依赖
 ```
 //通用库，其它LiaoLibrary依赖使用的前提都必须依赖此库
-implementation 'com.github.liao10108180.LiaoLibrary:library-common:1.0.0-test5'
+implementation 'com.github.liao10108180.LiaoLibrary:library-common:lastVersion'
 
 //工具库
 implementation 'com.github.liao10108180.LiaoLibrary:library-utils:lastVersion'
