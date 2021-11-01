@@ -41,7 +41,7 @@ dependencies {
     //retrofit2
     api "com.squareup.retrofit2:retrofit:2.9.0"
     api "com.squareup.retrofit2:converter-gson:2.9.0"
-//    api "com.squareup.retrofit2:adapter-rxjava3:2.9.0"
+    api "com.squareup.retrofit2:adapter-rxjava3:2.9.0"
 
     //依赖liao_common库
     implementation project(':library_liao_common')
