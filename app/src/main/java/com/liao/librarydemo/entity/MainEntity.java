@@ -16,7 +16,6 @@ public class MainEntity extends JSectionEntity {
 
     private String content;
 
-    private int tag;
 
     private Class<?> clazz;
 
@@ -26,17 +25,12 @@ public class MainEntity extends JSectionEntity {
         this.clazz = clazz;
     }
 
-    public MainEntity(boolean isHeader, String content, int tag) {
-        this.isHeader = isHeader;
-        this.content = content;
-        this.tag = tag;
-    }
-
-    public MainEntity(String content, int tag) {
+    public MainEntity(String content, Class<?> clazz) {
         this.isHeader = false;
         this.content = content;
-        this.tag = tag;
+        this.clazz = clazz;
     }
+
 
     public void setHeader(boolean header) {
         isHeader = header;
@@ -48,14 +42,6 @@ public class MainEntity extends JSectionEntity {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public int getTag() {
-        return tag;
-    }
-
-    public void setTag(int tag) {
-        this.tag = tag;
     }
 
     public Class getClazz() {

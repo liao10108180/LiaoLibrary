@@ -39,10 +39,10 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
         mAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(@NonNull BaseQuickAdapter<?, ?> adapter, @NonNull View view, int position) {
-//                Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
-//                ToastUtils.show("" + position);
                 MainEntity entity = (MainEntity) adapter.getData().get(position);
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                if (entity.getClazz() != null){
+                    startActivity(new Intent(MainActivity.this, entity.getClazz()));
+                }
             }
         });
         mBinding.recyclerView.setAdapter(mAdapter);
@@ -51,21 +51,21 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
 
     private void setItemEntity() {
         mEntityList = new ArrayList<>();
-        mEntityList.add(new MainEntity(true, "Base", 0x01));
-        mEntityList.add(new MainEntity("BaseActivity", 0x11));
-        mEntityList.add(new MainEntity("BaseBindingActivity", 0x12));
-        mEntityList.add(new MainEntity("BaseVMActivity", 0x13));
-        mEntityList.add(new MainEntity("BaseFragment", 0x14));
-        mEntityList.add(new MainEntity("BaseBindingFragment", 0x15));
-        mEntityList.add(new MainEntity("BaseVMFragment", 0x16));
+        mEntityList.add(new MainEntity(true, "Base", null));
+        mEntityList.add(new MainEntity("BaseActivity", null));
+        mEntityList.add(new MainEntity("BaseBindingActivity", null));
+        mEntityList.add(new MainEntity("BaseVMActivity", TestVMActivity.class));
+        mEntityList.add(new MainEntity("BaseFragment", null));
+        mEntityList.add(new MainEntity("BaseBindingFragment", null));
+        mEntityList.add(new MainEntity("BaseVMFragment", null));
 
-        mEntityList.add(new MainEntity(true, "Http", 0x20));
-        mEntityList.add(new MainEntity("HttpTest", 0x21));
+        mEntityList.add(new MainEntity(true, "Http", null));
+        mEntityList.add(new MainEntity("HttpTest", null));
 
-        mEntityList.add(new MainEntity(true, "Utils", 0x30));
-        mEntityList.add(new MainEntity("ActivityUtils", 0x31));
-        mEntityList.add(new MainEntity("BarUtils", 0x32));
-        mEntityList.add(new MainEntity("TimeUtils", 0x33));
+        mEntityList.add(new MainEntity(true, "Utils", null));
+        mEntityList.add(new MainEntity("ActivityUtils", null));
+        mEntityList.add(new MainEntity("BarUtils", null));
+        mEntityList.add(new MainEntity("TimeUtils", null));
     }
 
 }
