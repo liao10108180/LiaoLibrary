@@ -1,6 +1,7 @@
 package com.liao.librarydemo.activity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -50,6 +51,8 @@ public class SplashActivity extends BaseActivity {
 
                     @Override
                     public void onNext(@NonNull Long aLong) {
+
+                        Log.e(TAG, "onNext: "+ Build.DISPLAY );
                         startActivity(new Intent(SplashActivity.this,MainActivity.class));
                         finish();
                     }

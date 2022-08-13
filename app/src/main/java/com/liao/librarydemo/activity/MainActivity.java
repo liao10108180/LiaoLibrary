@@ -40,7 +40,8 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
             @Override
             public void onItemClick(@NonNull BaseQuickAdapter<?, ?> adapter, @NonNull View view, int position) {
                 MainEntity entity = (MainEntity) adapter.getData().get(position);
-                if (entity.getClazz() != null){
+                if (entity.getClazz() != null) {
+                    //跳转页面
                     startActivity(new Intent(MainActivity.this, entity.getClazz()));
                 }
             }
@@ -53,7 +54,7 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
         mEntityList = new ArrayList<>();
         mEntityList.add(new MainEntity(true, "Base", null));
         mEntityList.add(new MainEntity("BaseActivity", null));
-        mEntityList.add(new MainEntity("BaseBindingActivity", null));
+        mEntityList.add(new MainEntity("BaseBindingActivity", WebActivity.class));
         mEntityList.add(new MainEntity("BaseVMActivity", TestVMActivity.class));
         mEntityList.add(new MainEntity("BaseFragment", null));
         mEntityList.add(new MainEntity("BaseBindingFragment", null));

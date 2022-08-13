@@ -6,6 +6,8 @@ import com.hjq.toast.ToastUtils;
 import com.liao.common.util.LogUtils;
 import com.liao.library.base.BaseApplication;
 
+import java.util.HashMap;
+
 /**
  * @ProjectName: LiaoLibraryDemo
  * @Package: com.liao.librarydemo
@@ -30,5 +32,6 @@ public class App extends BaseApplication {
         //Toast
         ToastUtils.init(this);
         ToastUtils.setGravity(Gravity.CENTER);
+
     }
 }
