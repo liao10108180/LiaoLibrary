@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="theme">#FF7F50</color>
+
+    <color name="default_popup_select">#F1F3F6</color>
 </resources>
