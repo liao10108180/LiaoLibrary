@@ -31,6 +31,8 @@
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.TestVMActivity" />
         <activity android:name=".activity.WebActivity" />
+        <activity android:name=".activity.WebSocketActivity" />
+        <activity android:name=".activity.DatabaseActivity" />
 
         <service
             android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"

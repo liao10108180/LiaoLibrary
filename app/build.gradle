@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'org.greenrobot.greendao'
 }
 
 android {
@@ -36,11 +37,21 @@ android {
     }
 }
 
+greendao {
+    // 指定数据库schema版本号，迁移等操作会用到
+    schemaVersion 5
+    // 设置生成数据库文件的目录，默认是在build中，可以将生成的文件放到我们的java目录中
+    targetGenDir 'src/main/java'
+    // 设置生成的数据库相关文件的包名，默认为entity所在的包名
+    daoPackage 'com.liao.librarydemo.dao'
+}
+
 dependencies {
 
     implementation androidDependencies.appCompat
     implementation androidDependencies.constraintlayout
     implementation androidDependencies.material
+    implementation files('libs\\pinyin4j-2.5.0.jar')
 
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.extJunit
@@ -60,4 +71,12 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
 
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    //汉字转拼音API
+    implementation 'com.github.promeg:tinypinyin:2.0.3'
+    //greendao
+    implementation 'org.greenrobot:greendao:3.3.0'
+
+    //hutool加密
+    implementation 'cn.hutool:hutool-all:5.6.5'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.56'
 }

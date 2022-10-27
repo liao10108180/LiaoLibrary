@@ -22,7 +22,7 @@ import java.util.List;
  * @Description: description class
  */
 public class EditSelectPopup<T> extends PopupWindow implements OnItemChildClickListener {
-    private List<T> data;
+    private List<T> mData;
 
     private View mView;
 
@@ -35,9 +35,9 @@ public class EditSelectPopup<T> extends PopupWindow implements OnItemChildClickL
      */
     private boolean isEditHasFocus = false;
 
-    private ClickListener mClickListener;
+    private ClickListener<T> mClickListener;
 
-    private EditSelectAdapter.ItemContent mItemContent;
+    private EditSelectAdapter.ItemContent<T> mItemContent;
 
     private EditSelectAdapter<T> mAdapter;
 
@@ -48,7 +48,8 @@ public class EditSelectPopup<T> extends PopupWindow implements OnItemChildClickL
     }
 
     private void initPopup() {
-        setWidth(mEditText.getWidth());
+        int width = mEditText.getWidth();
+        setWidth(width);
 
         initEditListener();
 
@@ -59,20 +60,31 @@ public class EditSelectPopup<T> extends PopupWindow implements OnItemChildClickL
     }
 
     private void initEditListener() {
-        mEditText.setOnClickListener(v -> {
-            if (mClickListener != null) {
-                mClickListener.onEditClick(v);
-            }
-        });
+//        mEditText.setOnClickListener(v -> {
+//            if (mClickListener != null) {
+//                mClickListener.onEditClick(v);
+//            }
+//        });
 
-        mEditText.setOnFocusChangeListener((v, hasFocus) -> {
-            isEditHasFocus = hasFocus;
+//        mEditText.setOnFocusChangeListener((v, hasFocus) -> {
+//            isEditHasFocus = hasFocus;
+//
+//            if (isEditHasFocus && !isShowing() && data != null && data.size() > 0) {
+//                showAsDropDown(mEditText);
+//
+//            }
+//        });
 
-            if (isEditHasFocus && !isShowing() && data != null && data.size() > 0) {
-                showAsDropDown(mEditText);
-
-            }
-        });
+//        mEditText.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                if (event.getAction() == MotionEvent.ACTION_UP) {
+//                    Log.e("TAG", "onTouch: " + event.getAction());
+//                    showAsDropDown(mEditText);
+//                }
+//                return false;
+//            }
+//        });
     }
 
     @Override
@@ -80,14 +92,19 @@ public class EditSelectPopup<T> extends PopupWindow implements OnItemChildClickL
         if (mClickListener != null) {
             mClickListener.onItemClick(mAdapter.getItem(position));
 
-            dismiss();
+//            dismiss();
 
         }
     }
 
     public void setList(List<T> data) {
+        mData = data;
         if (mAdapter != null) {
-            mAdapter.setList(data);
+            mAdapter.setList(mData);
+        }
+
+        if (mData == null) {
+            dismiss();
         }
     }
 
@@ -110,10 +127,25 @@ public class EditSelectPopup<T> extends PopupWindow implements OnItemChildClickL
 
         }
 
-        public EditSelectPopup build() {
+        public <T> Builder setItemContent(EditSelectAdapter.ItemContent<T> itemContent) {
+            editSelectPopup.mItemContent = itemContent;
+            return this;
+
+        }
+
+        public <T> Builder setOnClickListener(ClickListener<T> clickListener) {
+            editSelectPopup.mClickListener = clickListener;
+            return this;
+        }
+
+        public <T> EditSelectPopup<T> build() {
             editSelectPopup.initPopup();
 
             return editSelectPopup;
         }
+    }
+
+    public void show() {
+        showAsDropDown(mEditText);
     }
 }

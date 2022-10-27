@@ -59,6 +59,8 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
         mEntityList.add(new MainEntity("BaseFragment", null));
         mEntityList.add(new MainEntity("BaseBindingFragment", null));
         mEntityList.add(new MainEntity("BaseVMFragment", null));
+        mEntityList.add(new MainEntity("WebSocketActivity", WebSocketActivity.class));
+        mEntityList.add(new MainEntity("DatabaseActivity", DatabaseActivity.class));
 
         mEntityList.add(new MainEntity(true, "Http", null));
         mEntityList.add(new MainEntity("HttpTest", null));
